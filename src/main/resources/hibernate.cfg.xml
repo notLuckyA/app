@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/service</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">1636</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <mapping class="com.myapp.app.Database.Tables.User"/>
+        <mapping class="com.myapp.app.Database.Tables.Client"/>
+        <mapping class="com.myapp.app.Database.Tables.Role"/>
+        <mapping class="com.myapp.app.Database.Tables.Timev"/>
+    </session-factory>
+</hibernate-configuration>
